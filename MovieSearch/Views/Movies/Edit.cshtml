@@ -1,0 +1,26 @@
+@model MovieSearch.Models.Movie
+
+<h1>Edit this movie</h1>
+
+@using (Html.BeginForm("Details", "Movies", new {id = Model.MovieId }))
+{
+  @Html.HiddenFor(model => model.MovieId)
+  @Html.LabelFor(model => model.Name)
+  @Html.EditorFor(model => model.Name)
+
+  @Html.LabelFor(model => model.Genre)
+  @Html.EditorFor(model => model.Genre)
+
+  @Html.LabelFor(model => model.Director)
+  @Html.EditorFor(model => model.Director)
+
+  @Html.LabelFor(model => model.Year)
+  @Html.EditorFor(model => model.Year)
+
+  @Html.LabelFor(model => model.Rating)
+  @Html.EditorFor(model => model.Rating)
+
+  <input type="submit" value="Submit" class="btn btn-default" required ="true" />
+}
+
+<a href="/Movies/Details/@(Model.MovieId)"><p>Return to Details</p></a>

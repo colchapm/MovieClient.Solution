@@ -1,0 +1,21 @@
+@using MovieSearch.Models;
+@model List<MovieSearch.Models.Movie>;
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1>All Movies:</h1>
+
+<ol>
+@foreach (Movie movie in Model)
+{
+    <ul>
+        <li>Name: @movie.Name</li>
+    </ul>
+    <a href="/Movies/Details/@(movie.MovieId)"><p>View Details</p></a>
+    <br>
+}
+</ol>
+
+<p>@Html.ActionLink("Add a new movie", "Create")</p>

@@ -1,0 +1,21 @@
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1> Movie Details:</h1>
+<ul>
+  <li>ID: @Model.MovieId</li>
+  <li>Name: @Model.Name</li>
+  <li>Genre: @Model.Genre</li>
+  <li>Director: @Model.Director</li>
+  <li>Year Released: @Model.Year</li>
+  <li>Rating: @Model.Rating</li>
+</ul>
+<br>
+
+<a href="/Movies/Edit/@(Model.MovieId)"><p>Edit</p></a>
+<br>
+
+<a href="/Movies"><p>Return</p></a>
+
+<a href="/Movies/Delete/@(Model.MovieId)"><p>DELETE MOVIE</p></a>

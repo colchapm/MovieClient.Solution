@@ -1,0 +1,25 @@
+@model MovieSearch.Models.Movie
+
+<h3>Add A New Movie</h3>
+
+@using (Html.BeginForm())
+{
+  @Html.LabelFor(model => model.Name)
+  @Html.TextBoxFor(model => model.Name)
+
+  @Html.LabelFor(model => model.Genre)
+  @Html.TextBoxFor(model => model.Genre)
+
+  @Html.LabelFor(model => model.Director)
+  @Html.TextBoxFor(model => model.Director)
+
+  @Html.LabelFor(model => model.Year)
+  @Html.TextBoxFor(model => model.Year)
+
+  @Html.LabelFor(model => model.Rating)
+  @Html.TextBoxFor(model => model.Rating)
+
+  <input type="submit" value="Submit" class="btn btn-default" required ="true" />
+}
+
+<p>@Html.ActionLink("Return", "Index")</p>
